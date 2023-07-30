@@ -11,7 +11,6 @@ int main(int argc, char** argv)
 	int a = 5;
 	GAMEENGINE_INFO("Hello! Var={0}", a);
 
-	printf("GameEngine is up and running");
 	auto app = GameEngine::CreateApplication();
 	app->Run();
 	delete app;
