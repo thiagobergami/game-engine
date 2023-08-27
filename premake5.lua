@@ -26,6 +26,7 @@ project "GameEngine"
 
     includedirs
     {
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 
@@ -36,8 +37,8 @@ project "GameEngine"
 
         defines
         {
-            "HZ_PLATFORM_WINDOWS",
-            "HZ_BUILD_DLL"
+            "GE_PLATFORM_WINDOWS",
+            "GE_BUILD_DLL"
         }
 
         postbuildcommands
@@ -46,15 +47,15 @@ project "GameEngine"
 		}
     
     filter "configurations:Debug"
-		defines "HZ_DEBUG"
+		defines "GE_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "HZ_RELEASE"
+		defines "GE_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
-		defines "HZ_DIST"
+		defines "GE_DIST"
 		optimize "On"
 
 
@@ -75,7 +76,7 @@ project "Sandbox"
 
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include",
+        "GameEngine/vendor/spdlog/include",
         "GameEngine/src"
     }
 
@@ -90,17 +91,17 @@ project "Sandbox"
 
         defines
         {
-            "HZ_PLATFORM_WINDOWS"
+            "GE_PLATFORM_WINDOWS"
         }
 
     filter "configurations:Debug"
-        defines "HZ_DEBUG"
+        defines "GE_DEBUG"
         symbols "On"
 
     filter "configurations:Release"
-        defines "HZ_RELEASE"
+        defines "GE_RELEASE"
         optimize "On"
 
     filter "configurations:Dist"
-        defines "HZ_DIST"
+        defines "GE_DIST"
         optimize "On"

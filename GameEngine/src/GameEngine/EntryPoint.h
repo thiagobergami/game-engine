@@ -1,6 +1,6 @@
 #pragma once
 
-#ifdef HZ_PLATFORM_WINDOWS
+#ifdef GE_PLATFORM_WINDOWS
 
 extern GameEngine::Application* GameEngine::CreateApplication();
 

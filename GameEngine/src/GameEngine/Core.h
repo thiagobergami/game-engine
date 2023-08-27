@@ -1,7 +1,7 @@
 #pragma once
 
-#ifdef HZ_PLATFORM_WINDOWS
-#ifdef HZ_BUILD_DLL
+#ifdef GE_PLATFORM_WINDOWS
+#ifdef GE_BUILD_DLL
 #define GAMEENGINE_API __declspec(dllexport)
 #else
 #define GAMEENGINE_API __declspec(dllimport)	
@@ -9,3 +9,5 @@
 #else
 #error GameEngine only support windows!
 #endif
+
+#define BIT(x) (1<<x)
